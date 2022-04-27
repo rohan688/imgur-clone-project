@@ -76,11 +76,23 @@
     align-items: center;
 }
 #mid-content{
-    border: solid 1px red;
     width: 90%;
     margin: auto;
     height: 600px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 20px;
+}
+.title{
+    font-size: 10px;
+}
+.child{
+    border: solid 1px grey;
+}
+.imgdiv{
+    border: solid 1px red;
+    height: 100px;
+}
+.imgdiv>img{
+    width: 100%;
 }
