@@ -89,10 +89,10 @@
 .child{
     border: solid 1px grey;
 }
-.imgdiv{
+/* .imgdiv{
     border: solid 1px red;
     height: 100px;
-}
-.imgdiv>img{
+} */
+.smalllImg{
     width: 100%;
 }

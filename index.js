@@ -183,19 +183,19 @@ async function searchVideo(){
             // console.log(ele.images[0].gifv)
         var div1= document.createElement("div");
         div1.setAttribute("class","child");
-        var imgDiv=document.createElement('div');
-        imgDiv.setAttribute("class","imgdiv");
+      
         var textDiv=document.createElement('div');
         textDiv.setAttribute("class","textdiv");
         var name=document.createElement("h2");
         name.textContent=ele.title;
         name.setAttribute('class',"title")
         var vid=document.createElement('img');
+        vid.setAttribute("class","smallImg")
         if(ele.images&&ele.images[0]&&ele.images[0].type=="image/jpeg"){
             vid.setAttribute("src",ele.images[0].link)
         }
-         imgDiv.append(vid)
-         div1.append(imgDiv,name);
+        
+         div1.append(vid,name);
         result_div.append(div1);
     });
 }
