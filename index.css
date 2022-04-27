@@ -75,3 +75,12 @@
     gap: 20px;
     align-items: center;
 }
+#mid-content{
+    border: solid 1px red;
+    width: 90%;
+    margin: auto;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}

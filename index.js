@@ -160,5 +160,36 @@ tags.forEach((el,i)=>{
     mainDiv.append(Div);
     tag.append(mainDiv);
 });
+const result_div=document.getElementById('mid-content');
+async function searchVideo(){
+    try{
+         let res= await fetch("https://api.imgur.com/3/gallery/hot/-viral/window/1?client_id=546c25a59c58ad7&showViral=true&mature=true&album_previews=true")
+        let data= await res.json();
+       
+          let videos=data.data;
+          console.log(videos)
+        display(videos);
+    }
+    catch(e){
+        console.log("err:",e);
+    }
+    }
+    searchVideo();
 
-// https://api.imgur.com/3/gallery/{{section}}/{{sort}}/{{window}}/{{page}}?showViral={{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}
+    function display(data){
+        
+        data.map(function(ele){
+            
+            // console.log(ele.images[0].gifv)
+        var div1= document.createElement("div");
+        var name=document.createElement("h2")
+        name.textContent=ele.datetime;
+        var vid=document.createElement('img');
+        if(ele.images&&ele.images[0]&&ele.images[0].type=="image/jpeg"){
+            vid.setAttribute("src",ele.images[0].link)
+        }
+         div1.append(vid);
+        result_div.append(div1);
+    });
+}
+
